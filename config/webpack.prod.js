@@ -15,11 +15,11 @@ module.exports = merge(webpackBaseConfig, {
         terserOptions: {
           compress: {
             drop_console: true
-          }
+          },
+          cache: true,
+          sourceMap: true
         },
-        cache: true,
-        parallel: true,
-        sourceMap: true
+        parallel: true
       })
     ],
     chunkIds: 'named',

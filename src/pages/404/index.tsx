@@ -7,7 +7,7 @@ import classNames from 'classnames'
 import CSSModules from 'react-css-modules'
 
 function NotFound() {
-  // const [animated, setAnimated] = useState<string>('')
+  // const [animated, setAnimated] = useState()
 
   const handleEnter = () => {
     // setAnimated('hinge')
