@@ -7,18 +7,17 @@ import classNames from 'classnames'
 import CSSModules from 'react-css-modules'
 
 function NotFound() {
-  // const [animated, setAnimated] = useState()
+  const [animated, setAnimated] = useState<string>('')
 
   const handleEnter = () => {
-    // setAnimated('hinge')
+    setAnimated('hinge')
   }
 
   return (
     <div styleName="not-found">
-      hooks有问题啊
-      {/* <img src={img} alt="404" styleName={classNames('animated', 'swing', animated)} onMouseEnter={handleEnter} /> */}
+      <img src={img} alt="404" styleName={classNames('animated', 'swing', animated)} onMouseEnter={handleEnter} />
     </div>
   )
 }
 
-export default CSSModules(styles)(NotFound)
+export default CSSModules(styles, { allowMultiple: true })(NotFound)

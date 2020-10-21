@@ -4,7 +4,7 @@
 - [x] 基础webpack配置
 - [x] dev开发服务器
 - [ ] 代码分割
-- [ ] terser压缩js
+- [x] terser压缩js
 - [x] css处理
 - [ ] postcss add autoprefixer
 - [ ] 构建bundle分析

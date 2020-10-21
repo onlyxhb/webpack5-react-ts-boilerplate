@@ -15,7 +15,7 @@ module.exports = function (api) {
           modules: false
         }
       ],
-      'react-app'
+      '@babel/preset-react'
     ],
     plugins: [
       '@babel/plugin-transform-runtime',

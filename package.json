@@ -37,7 +37,6 @@
     "@typescript-eslint/parser": "^4.1.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-dev-expression": "^0.2.2",
-    "babel-preset-react-app": "^9.1.2",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "core-js": "^3.6.5",
     "cross-env": "^7.0.2",
