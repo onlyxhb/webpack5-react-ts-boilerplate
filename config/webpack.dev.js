@@ -13,6 +13,7 @@ module.exports = merge(webpackBaseConfig, {
   // 开发服务配置
   devServer: {
     host: '0.0.0.0',
+    port: 10086,
     disableHostCheck: true,
     useLocalIp: true,
     open: true,

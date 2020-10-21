@@ -21,6 +21,13 @@ module.exports = function (api) {
       '@babel/plugin-transform-runtime',
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-proposal-optional-chaining',
+      'transform-class-properties',
+      [
+        '@babel/plugin-proposal-decorators',
+        {
+          legacy: true
+        }
+      ],
       [
         'import',
         {
@@ -29,19 +36,6 @@ module.exports = function (api) {
           style: true
         }
       ]
-    ],
-    env: {
-      development: {
-        presets: [['@babel/preset-react', { development: true }]]
-      },
-      production: {
-        presets: ['@babel/preset-react'],
-        plugins: [
-          'babel-plugin-dev-expression',
-          '@babel/plugin-transform-react-constant-elements',
-          '@babel/plugin-transform-react-inline-elements'
-        ]
-      }
-    }
+    ]
   }
 }

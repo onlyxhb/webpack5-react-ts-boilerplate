@@ -1,8 +1,7 @@
 /** @format */
 
 import React from 'react'
-import NotFound from 'src/pages/404'
-import Hello from 'src/pages/hello'
+import loadable from '@loadable/component'
 
 const routes = [
   {
@@ -11,11 +10,11 @@ const routes = [
   },
   {
     path: '/hello',
-    component: (props: any) => <Hello {...props} />
+    component: loadable(() => import('src/pages/hello'))
   },
   {
     path: '/404',
-    component: (props: any) => <NotFound {...props} />
+    component: loadable(() => import('src/pages/404'))
   }
 ]
 

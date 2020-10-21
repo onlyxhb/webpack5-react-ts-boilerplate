@@ -3,6 +3,7 @@
 const { merge } = require('webpack-merge')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const webpackBaseConfig = require('./webpack.base')
 
@@ -33,26 +34,23 @@ module.exports = merge(webpackBaseConfig, {
       cacheGroups: {
         vendor: {
           test: /node_modules/,
-          name: 'vendors',
-          chunks: 'initial'
+          name: 'vendor',
+          chunks: 'all',
+          enforce: true
         },
         antd: {
           test: /antd?/,
           name: 'antd',
           priority: 10,
-          chunks: 'initial'
-        },
-        quill: {
-          test: /quill?/,
-          name: 'quill',
-          priority: 10,
-          chunks: 'initial'
+          chunks: 'initial',
+          enforce: true
         },
         react: {
           test: /react|react-dom|mobx|prop-type/,
           name: 'react',
           priority: 10,
-          chunks: 'initial'
+          chunks: 'initial',
+          enforce: true
         }
       }
     },
@@ -61,6 +59,7 @@ module.exports = merge(webpackBaseConfig, {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'assets/css/[name].[contenthash].css',
       chunkFilename: 'assets/css/[name].[contenthash].css'
