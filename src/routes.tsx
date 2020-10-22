@@ -1,20 +1,19 @@
 /** @format */
 
-import React from 'react'
-import loadable from '@loadable/component'
+import React, { lazy } from 'react'
 
 const routes = [
   {
     path: '/',
-    component: () => <h1>hhhh</h1>
+    component: () => <h1>嘿嘿</h1>
   },
   {
     path: '/hello',
-    component: loadable(() => import('src/pages/hello'))
+    component: lazy(() => import('src/pages/hello'))
   },
   {
     path: '/404',
-    component: loadable(() => import('src/pages/404'))
+    component: lazy(() => import('src/pages/404'))
   }
 ]
 

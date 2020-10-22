@@ -33,7 +33,8 @@ module.exports = function (api) {
           libraryDirectory: 'es',
           style: true
         }
-      ]
+      ],
+      'react-hot-loader/babel'
     ]
   }
 }

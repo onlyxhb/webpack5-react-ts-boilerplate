@@ -6,6 +6,7 @@
 
 module.exports = {
   plugins: [
+    require('autoprefixer')(),
     // 修复一些 flex 的 bug
     require('postcss-flexbugs-fixes'),
     // 支持一些现代浏览器 CSS 特性，支持 browserslist

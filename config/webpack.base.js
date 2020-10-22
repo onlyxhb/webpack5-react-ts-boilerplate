@@ -4,6 +4,7 @@ const path = require('path')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const WebpackBar = require('webpackbar')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { DefinePlugin } = require('webpack')
 
 const getLessLoaderOption = function ({ cssModules = false }) {
   const lessLoaderOption = [
@@ -34,7 +35,9 @@ const getLessLoaderOption = function ({ cssModules = false }) {
         sourceMap: true,
         lessOptions: {
           javascriptEnabled: true
-        }
+        },
+        // This is especially useful when some of your Less variables depend on the environment
+        additionalData: `@env: ${process.env.NODE_ENV}; @primary-color: #29b6b0;`
       }
     }
   ]
@@ -134,6 +137,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }),
     // 强制执行所有必须模块的整个路径，匹配磁盘上实际路径的确切大小写, 避免大小写问题引起的麻烦
     new CaseSensitivePathsPlugin(),
     // 进度条插件

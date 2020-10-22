@@ -3,18 +3,20 @@
 
 - [x] 基础webpack配置
 - [x] dev开发服务器
-- [ ] 代码分割
+- [x] ts支持
+- [x] ts检查
+- [x] 代码分割
 - [x] terser压缩js
 - [x] css处理
-- [ ] postcss add autoprefixer
-- [ ] 构建bundle分析
-- [ ] url-loader、file-loader处理资源
-- [ ] NODE_ENV注入
-- [ ] react-hot-loader热更新
-- [ ] 懒加载模块热更
+- [x] postcss add autoprefixer
+- [x] 构建bundle分析
+- [x] url-loader处理资源
+- [x] less全局变量注入
+- [x] NODE_ENV注入
+- [x] react-hot-loader热更新
+- [x] 懒加载模块热更
 - [ ] stylelint
-- [ ] eslint
-- [ ] 自动给生成changelog脚本
+- [x] eslint
 - [ ] git commit钩子格式化代码
 - [ ] 命令行传参
 - [ ] webpack-chains重构
