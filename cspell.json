@@ -1,0 +1,11 @@
+{
+  "ignoreWords": [
+    "stylelint",
+    "webpackbar",
+    "commitlint",
+    "antd",
+    "mobx",
+    "flexbugs",
+    "fragram"
+  ]
+}

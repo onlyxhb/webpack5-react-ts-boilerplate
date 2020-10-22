@@ -3,8 +3,8 @@
 
 - [x] 基础webpack配置
 - [x] dev开发服务器
-- [x] ts支持
-- [x] ts检查
+- [x] typescript支持
+- [x] typescript检查
 - [x] 代码分割
 - [x] terser压缩js
 - [x] css处理
@@ -15,10 +15,9 @@
 - [x] NODE_ENV注入
 - [x] react-hot-loader热更新
 - [x] 懒加载模块热更
-- [ ] stylelint
+- [x] stylelint
 - [x] eslint
-- [ ] git commit钩子格式化代码
+- [x] git commit钩子格式化代码
 - [ ] 命令行传参
 - [ ] webpack-chains重构
-- [ ] 支持typescript
 - [ ] 端口防冲突
