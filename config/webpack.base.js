@@ -50,8 +50,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../dist/'),
-    // webpack-dev-server 也会默认从 publicPath 为基准，使用它来决定在哪个目录下启用服务，来访问 webpack 输出的文件。
-    publicPath: `/`,
+    publicPath: '/',
     filename: 'assets/js/[name].[contenthash:8].js',
     chunkFilename: 'assets/js/[name].[contenthash:8].js',
     sourceMapFilename: 'assets/js/[name].[contenthash:8].js.map'

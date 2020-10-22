@@ -4,7 +4,7 @@ const { merge } = require('webpack-merge')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const webpackBaseConfig = require('./webpack.base')
 
@@ -64,7 +64,7 @@ module.exports = merge(webpackBaseConfig, {
     new MiniCssExtractPlugin({
       filename: 'assets/css/[name].[contenthash].css',
       chunkFilename: 'assets/css/[name].[contenthash].css'
-    }),
-    new BundleAnalyzerPlugin()
+    })
+    // new BundleAnalyzerPlugin()
   ]
 })

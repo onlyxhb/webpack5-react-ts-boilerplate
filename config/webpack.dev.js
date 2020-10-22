@@ -14,6 +14,7 @@ module.exports = merge(webpackBaseConfig, {
   devServer: {
     host: '0.0.0.0',
     port: 10086,
+    publicPath: '/',
     disableHostCheck: true,
     useLocalIp: true,
     open: true,
