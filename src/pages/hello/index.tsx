@@ -2,18 +2,23 @@
 
 import React, { useState, useCallback } from 'react'
 import { observer } from 'mobx-react'
+import styles from './index.module.less'
 import CSSModules from 'react-css-modules'
 import { Button } from 'antd'
 
 import userStore from 'src/stores/userStore'
-import styles from './index.module.less'
 
 function Hello() {
   const handleClick = useCallback(() => {
-    userStore.getUserInfo()
+    userStore.setUserInfo({
+      name: '444',
+      avatar: '333',
+      phone: 3333,
+      status: 2
+    })
   }, [])
 
-  console.log(123456, userStore)
+  console.log(userStore.userInfo)
 
   return (
     <div styleName="hello">

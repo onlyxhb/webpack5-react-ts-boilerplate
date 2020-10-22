@@ -18,16 +18,14 @@ module.exports = function (api) {
       '@babel/preset-react'
     ],
     plugins: [
-      '@babel/plugin-transform-runtime',
-      '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-proposal-optional-chaining',
-      'transform-class-properties',
       [
         '@babel/plugin-proposal-decorators',
         {
           legacy: true
         }
       ],
+      'transform-class-properties',
       [
         'import',
         {
